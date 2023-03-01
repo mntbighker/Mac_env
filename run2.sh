@@ -9,10 +9,12 @@ port select --set python3 python311
 port select --set luarocks lua51-luarocks
 
 cd ~/Library/Fonts && {
-wget 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
-wget 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf'
-wget 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf'
-wget 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf'
+wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip'
+unzip Hack '*.ttf' -x '*Windows*'
+rm Hack.zip
+https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
+unzip Meslo '*.ttf' -x '*Windows*'
+rm Meslo.zip
 cd -; }
 
 wget 'https://iterm2.com/downloads/stable/iTerm2-3_4_19.zip'
@@ -26,5 +28,9 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zs
 echo "check Terminal, iTerm2 font settings"
 
 mv .zshrc.pre-oh-my-zsh .zshrc
+
+gem install colorls
+cat << 'EOF' >> ~/.zshrc
+alias ls='colorls'
 
 say "Mission accomplished"
