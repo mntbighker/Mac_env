@@ -111,10 +111,9 @@ export ARCHFLAGS="-arch arm64"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias home="git --work-tree=$HOME --git-dir=$HOME/.home.git"
+alias ls='colorls'
 PATH=$HOME/bin:$HOME/local/bin:$HOME/local/sbin:$PATH
 export PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias ls='colorls'
-
