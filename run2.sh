@@ -7,6 +7,7 @@ port -f activate python311
 port select --set python python311
 port select --set python3 python311
 port select --set luarocks lua51-luarocks
+port select --set ruby ruby32
 
 cd ~/Library/Fonts && {
 wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip'
