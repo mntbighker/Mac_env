@@ -13,7 +13,7 @@ cd ~/Library/Fonts && {
 wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip'
 unzip Hack '*.ttf' -x '*Windows*'
 rm Hack.zip
-https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
+wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip'
 unzip Meslo '*.ttf' -x '*Windows*'
 rm Meslo.zip
 cd -; }
