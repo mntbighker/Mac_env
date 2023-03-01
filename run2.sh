@@ -33,5 +33,4 @@ mv .zshrc.pre-oh-my-zsh .zshrc
 gem install colorls
 cat << 'EOF' >> ~/.zshrc
 alias ls='colorls'
-
 say "Mission accomplished"
