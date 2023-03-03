@@ -18,12 +18,14 @@ unzip Meslo '*.ttf' -x '*Windows*'
 rm Meslo.zip
 cd -; }
 
-rm -rf .config
+cd ~/
+rm -rf ~/.config
 mv Mac_env/.config .
 mv Mac_env/.tmux.conf .
 
 wget 'https://iterm2.com/downloads/stable/iTerm2-3_4_19.zip'
 unzip iTerm2-3_4_19.zip
+mkdir $HOME/Applications
 mv iTerm.app $HOME/Applications/
 
 echo "### type exit after the ohmyzsh script finishes, to complete setup ###"
@@ -33,8 +35,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 echo "## Change Terminal, iTerm2 font settings to Hack or Meslo##"
 
-rm .zshrc.pre-oh-my-zsh
-rm ./.zshrc
+rm ~/.zshrc.pre-oh-my-zsh
+rm ~/.zshrc
 mv Mac_env/.zshrc .
 rm -rf ~/Mac_env
 
