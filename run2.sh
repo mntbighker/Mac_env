@@ -22,11 +22,12 @@ wget 'https://iterm2.com/downloads/stable/iTerm2-3_4_19.zip'
 unzip iTerm2-3_4_19.zip
 mv iTerm.app $HOME/Applications/
 
+echo "### type exit after the ohmyzsh script finishes, to complete setup ###"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-echo "check Terminal, iTerm2 font settings"
+echo "## Change Terminal, iTerm2 font settings to Hack or Meslo##"
 
 mv .zshrc.pre-oh-my-zsh .zshrc
 
