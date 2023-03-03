@@ -42,4 +42,6 @@ rm -rf ~/Mac_env
 
 gem install colorls
 
+echo "The Command to run in each iTerm login profile - ssh -t sshaliasname 'tmux -CC new -A -s main' "
+
 say "Mission accomplished"
