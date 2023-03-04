@@ -16,6 +16,7 @@ port select --set python3 python311
 port select --set luarocks lua51-luarocks
 port select --set ruby ruby32
 
+echo "Downloading fancy bitmap fonts\n"
 cd ~/Library/Fonts && {
 wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip'
 unzip Hack '*.ttf' -x '*Windows*'
@@ -30,6 +31,7 @@ rm -rf ~/.config
 mv Mac_env/.config .
 mv Mac_env/.tmux.conf .
 
+echo 
 wget 'https://iterm2.com/downloads/stable/iTerm2-3_4_19.zip'
 unzip iTerm2-3_4_19.zip
 if ! [ -d $HOME/Applications ]; then
@@ -42,17 +44,17 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-echo "## Change Terminal, iTerm2 font settings to Hack or Meslo to get the fancy bitmap icons##"
+echo "## Change Terminal, iTerm2 font settings to Hack or Meslo to get the fancy bitmap icons ##\n"
 
 rm ~/.zshrc.pre-oh-my-zsh
 rm ~/.zshrc
 mv Mac_env/.zshrc .
 rm -rf ~/Mac_env
 
-echo "Installing fancy ruby colorls gem\n"
+echo "Installing ruby colorls gem\n"
 gem install colorls
 echo "You can add 'alias ls=colorls' to .zshrc to get the fancy one every time\n"
-echo "The Command to run in each iTerm login profile - ssh -t ssh_config_alias_name 'tmux -CC new -A -s main'\n"
+echo "The command to run in each iTerm profile: \n\nssh -t ssh_config_alias_name 'tmux -CC new -A -s main' \n"
 echo "Run 'p10k configure' to customize the shell prompt\n"
 
-say "Mission accomplished"
+say -v Rishi "Mission accomplished"
