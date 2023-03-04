@@ -2,6 +2,11 @@
 
 open https://github.com/emilyst/home
 
+if ! [ -f $HOME/Mac_env/.tmux.conf ]; then
+  echo "Please git clone into $HOME before running run2.sh\n"
+  exit
+fi
+
 cd $HOME
 curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.8.1.tar.bz2
 tar xf MacPorts-2.8.1.tar.bz2
