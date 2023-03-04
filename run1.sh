@@ -1,15 +1,16 @@
 #!/bin/zsh
 
-echo "Opening two web pages related to this setup\n"
+say -v Rishi "Opening two web pages related to this setup"
 open "https://github.com/emilyst/home"
 open "https://www.youtube.com/@typecraft_dev"
+open "https://www.macports.org"
 
 if ! [ -f $HOME/Mac_env/.tmux.conf ]; then
   echo "Please git clone into $HOME before running run2.sh\n"
   exit
 fi
 
-echo "Building and installing some local binaries\n"
+echo "Building and installing some local binaries with MacPorts\n"
 cd $HOME
 curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.8.1.tar.bz2
 tar xf MacPorts-2.8.1.tar.bz2
