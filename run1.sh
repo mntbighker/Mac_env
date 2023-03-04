@@ -1,9 +1,10 @@
 #!/bin/zsh
 
-say -v Rishi "Opening two web pages related to this setup"
+say -v Rishi "Opening web pages related to this setup"
 open "https://github.com/emilyst/home"
 open "https://www.youtube.com/@typecraft_dev"
 open "https://www.macports.org"
+open "https://www.josean.com/posts/tmux-setup"
 
 if ! [ -f $HOME/Mac_env/.tmux.conf ]; then
   echo "Please git clone into $HOME before running run2.sh\n"
