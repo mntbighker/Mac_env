@@ -13,6 +13,7 @@ port -f activate ruby32
 port -f activate lua51-luarocks
 port select --set python python311
 port select --set python3 python311
+port select --set pygments py311-pygments
 port select --set luarocks lua51-luarocks
 port select --set ruby ruby32
 
