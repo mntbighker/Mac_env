@@ -1,2 +1,2 @@
 # Mac_env
-Mac home directory config setup using MacPorts package manager
+Mac zsh config setup and Neovim installation using MacPorts package manager
