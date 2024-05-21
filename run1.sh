@@ -13,12 +13,12 @@ fi
 
 echo "Building and installing some local binaries with MacPorts\n"
 cd $HOME
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.8.1.tar.bz2
-tar xf MacPorts-2.8.1.tar.bz2
-cd MacPorts-2.8.1
+curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.9.3.tar.bz2
+tar xf MacPorts-2.9.3.tar.bz2
+cd MacPorts-2.9.3
 ./configure --prefix=$HOME/local --with-install-user=$USER --with-install-group=staff --without-startupitems
 make && make install
 cd $HOME
-rm -rf MacPorts-2.8.1 && rm MacPorts-2.8.1.tar.bz2
+rm -rf MacPorts-2.8.1 && rm MacPorts-2.9.3.tar.bz2
 
 say -v Rishi "Mission accomplished, well done"
