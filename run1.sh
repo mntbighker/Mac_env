@@ -3,7 +3,7 @@
 say -v Rishi "Opening web pages related to this setup"
 open "https://github.com/emilyst/home"
 open "https://www.youtube.com/@typecraft_dev"
-open "https://www.macports.org"
+open "https://brew.sh"
 open "https://www.josean.com/posts/tmux-setup"
 
 if ! [ -f $HOME/Mac_env/.tmux.conf ]; then
@@ -11,14 +11,8 @@ if ! [ -f $HOME/Mac_env/.tmux.conf ]; then
   exit
 fi
 
-echo "Building and installing some local binaries with MacPorts\n"
+echo "Building and installing some local binaries with Homebrew\n"
 cd $HOME
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.9.3.tar.bz2
-tar xf MacPorts-2.9.3.tar.bz2
-cd MacPorts-2.9.3
-./configure --prefix=$HOME/local --with-install-user=$USER --with-install-group=staff --without-startupitems
-make && make install
-cd $HOME
-rm -rf MacPorts-2.8.1 && rm MacPorts-2.9.3.tar.bz2
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"tar xf MacPorts-2.9.3.tar.bz2 # requires sudo rights
 
 say -v Rishi "Mission accomplished, well done"
