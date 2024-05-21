@@ -111,7 +111,6 @@ export ARCHFLAGS="-arch arm64"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias home="git --work-tree=$HOME --git-dir=$HOME/.home.git"
-alias ls='colorls'
 PATH=$HOME/bin:$PATH
 export PATH
 
