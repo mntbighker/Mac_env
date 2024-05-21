@@ -14,7 +14,7 @@ fi
 echo "Building and installing some local binaries with Homebrew\n"
 cd $HOME
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"tar xf MacPorts-2.9.3.tar.bz2 # requires sudo rights
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/mwmoorcroft/.zprofile
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 say -v Rishi "Mission accomplished, well done"
