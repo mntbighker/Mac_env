@@ -74,6 +74,21 @@ _fzf_compgen_dir() {
 }
 
 EOF
+source ~/.zshrc
+
+cat << 'EOF' >> ~/.zshrc
+
+# --- setup fzf theme ---
+fg="#CBE0F0"
+bg="#011628"
+bg_highlight="#143652"
+purple="#B388FF"
+blue="#06BCE4"
+cyan="#2CF9ED"
+
+export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+EOF
+source ~/.zshrc
 
 echo "The command to run in each iTerm profile: \n\nssh -t ssh_config_alias_name 'tmux -CC new -A -s main' \n"
 echo "Run 'p10k configure' to customize the shell prompt\n"
