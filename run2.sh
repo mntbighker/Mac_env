@@ -90,6 +90,13 @@ export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${
 EOF
 source ~/.zshrc
 
+brew install zoxide
+# https://github.com/nanotee/zoxide.vim
+cat << 'EOF' >> ~/.zshrc
+
+eval "$(zoxide init zsh)"
+EOF
+
 echo "The command to run in each iTerm profile: \n\nssh -t ssh_config_alias_name 'tmux -CC new -A -s main' \n"
 echo "Run 'p10k configure' to customize the shell prompt\n"
 
