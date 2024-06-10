@@ -91,7 +91,7 @@ EOF
 source ~/.zshrc
 
 brew install zoxide
-# https://github.com/nanotee/zoxide.vim
+# https://github.com/nanotee/zoxide
 cat << 'EOF' >> ~/.zshrc
 
 eval "$(zoxide init zsh)"
