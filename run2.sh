@@ -94,7 +94,7 @@ brew install zoxide
 # https://github.com/nanotee/zoxide
 cat << 'EOF' >> ~/.zshrc
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 EOF
 
 echo "The command to run in each iTerm profile: \n\nssh -t ssh_config_alias_name 'tmux -CC new -A -s main' \n"
