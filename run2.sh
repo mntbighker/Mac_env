@@ -98,6 +98,10 @@ eval "$(zoxide init zsh --cmd cd)"
 EOF
 
 brew install eza
+cat << 'EOF' >> $HOME/.zshrc
+
+alias ls='eza'
+EOF
 
 echo "The command to run in each iTerm profile: \n\nssh -t ssh_config_alias_name 'tmux -CC new -A -s main' \n"
 echo "Run 'p10k configure' to customize the shell prompt\n"
