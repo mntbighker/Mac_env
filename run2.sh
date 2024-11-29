@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if ! [ -f $HOME/Mac_env/.tmux.conf ]; then
+if ! [ -f $HOME/Mac_env/.zshrc ]; then
   echo "Please git clone into $HOME before running run2.sh\n"
   exit
 fi
@@ -22,11 +22,10 @@ rm Meslo.zip
 cd $HOME
 rm -rf ~/.config
 mv Mac_env/.config .
-mv Mac_env/.tmux.conf .
 
 echo 
-wget 'https://iterm2.com/downloads/stable/iTerm2-3_5_0.zip'
-unzip iTerm2-3_5_0.zip
+wget 'https://iterm2.com/downloads/stable/iTerm2-3_5_10.zip'
+unzip iTerm2-3_5_10.zip
 if ! [ -d $HOME/Applications ]; then
   mkdir $HOME/Applications
 fi
