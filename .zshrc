@@ -1,4 +1,6 @@
 ssh-add --apple-load-keychain ~/.ssh/github
+ssh-add --apple-load-keychain ~/.ssh/pi-6e
+ssh-add --apple-load-keychain ~/.ssh/rocky
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
