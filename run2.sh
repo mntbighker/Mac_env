@@ -105,4 +105,7 @@ EOF
 echo "The command to run in each iTerm profile: \n\nssh -t ssh_config_alias_name 'tmux -CC new -A -s main' \n"
 echo "Run 'p10k configure' to customize the shell prompt\n"
 
+# https://github.com/sxyazi/yazi
+brew install yazi ffmpeg sevenzip jq poppler ripgrep imagemagick font-symbols-only-nerd-font
+
 say -v Rishi "Mission accomplished"
