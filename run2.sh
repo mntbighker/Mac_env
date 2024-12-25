@@ -108,4 +108,15 @@ echo "Run 'p10k configure' to customize the shell prompt\n"
 # https://github.com/sxyazi/yazi
 brew install yazi ffmpeg sevenzip jq poppler ripgrep imagemagick font-symbols-only-nerd-font
 
+cat << 'EOF' >> ~/.zshrc
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+EOF
+
 say -v Rishi "Mission accomplished"
