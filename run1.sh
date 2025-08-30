@@ -1,8 +1,6 @@
 #!/bin/zsh
 
 say -v Rishi "Opening web pages related to this setup"
-open "https://github.com/emilyst/home"
-open "https://www.youtube.com/@typecraft_dev"
 open "https://brew.sh"
 
 if ! [ -f $HOME/Mac_env/.zshrc ]; then
