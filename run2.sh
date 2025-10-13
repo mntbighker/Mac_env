@@ -21,7 +21,7 @@ rm Meslo.zip
 
 cd $HOME
 cd ~/.config
-git clone https://github.com/radleylewis/nvim.git
+git clone https://github.com/mntbighker/nvim.git
 cat << 'EOF' > nvim/lua/plugins/suda-vim.lua
 return {
 	"lewis6991/gitsigns.nvim",
