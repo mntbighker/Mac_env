@@ -1,10 +1,5 @@
 #!/bin/zsh
 
-if ! [ -f $HOME/Mac_env/.zshrc ]; then
-  echo "Please git clone into $HOME before running run2.sh\n"
-  exit
-fi
-
 brew update; brew upgrade
 brew install npm neovim wget lazygit cmake efm-langserver luarocks rust rust-analyzer golang fzf fd zoxide eza yazi ffmpeg sevenzip jq poppler ripgrep imagemagick font-symbols-only-nerd-font iterm2
 
