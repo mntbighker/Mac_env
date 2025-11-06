@@ -5,10 +5,10 @@ brew install npm neovim wget lazygit cmake efm-langserver luarocks rust rust-ana
 
 echo "Downloading fancy bitmap fonts\n"
 cd ~/Library/Fonts && {
-wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip'
+wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip'
 unzip Hack '*.ttf' -x '*Windows*'
 rm Hack.zip
-wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip'
+wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip'
 unzip Meslo '*.ttf' -x '*Windows*'
 rm Meslo.zip
 }
