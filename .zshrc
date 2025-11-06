@@ -1,6 +1,4 @@
-ssh-add --apple-load-keychain ~/.ssh/github
-ssh-add --apple-load-keychain ~/.ssh/pi-6e
-ssh-add --apple-load-keychain ~/.ssh/rocky
+ssh-add --apple-load-keychain
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export FPATH="$HOME/.local/eza/completions/zsh:$(brew --prefix)/share/zsh/site-functions:$FPATH"
@@ -88,9 +86,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   web-search
-  tmux
 )
-ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
